@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillForge | Smart Career Matcher</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="bg-grid"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+
+<nav class="nav">
+  <div class="brand"><div class="brand-mark">SF</div><div><strong>SkillForge</strong><span>Career Intelligence</span></div></div>
+  <div class="nav-pill">Accenture-focused portfolio project</div>
+</nav>
+
+<main class="shell">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">SMART CAREER MATCHING</div>
+    <h1>Turn your skills into your <span>next role.</span></h1>
+    <p>Select the technologies you know. SkillForge compares your profile against technology role skill sets and highlights your strongest matches and skill gaps.</p>
+    <div class="hero-stats"><div><b>10</b><small>Role profiles</small></div><div><b>24</b><small>Skills</small></div><div><b>100%</b><small>Explainable match</small></div></div>
+  </div>
+  <div class="architecture-card">
+    <div class="card-label">MATCH ENGINE</div>
+    <svg viewBox="0 0 500 280" class="architecture-svg">
+      <defs><linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#6d7cff"/><stop offset="1" stop-color="#20d9c7"/></linearGradient></defs>
+      <g class="flow-lines">
+        <path d="M100 90 C170 90 170 50 250 50"/><path d="M100 140 C175 140 175 140 250 140"/><path d="M100 190 C170 190 170 230 250 230"/>
+        <path d="M280 50 C350 50 350 90 405 90"/><path d="M280 140 C350 140 350 140 405 140"/><path d="M280 230 C350 230 350 190 405 190"/>
+      </g>
+      <g class="node">
+        <rect x="20" y="65" width="90" height="50" rx="12"/><text x="65" y="95">SKILLS</text>
+        <rect x="20" y="115" width="90" height="50" rx="12"/><text x="65" y="145">PROFILE</text>
+        <rect x="20" y="165" width="90" height="50" rx="12"/><text x="65" y="195">GOALS</text>
+        <rect x="225" y="110" width="95" height="60" rx="15" class="core"/><text x="272" y="145">MATCH</text>
+        <rect x="395" y="65" width="90" height="50" rx="12"/><text x="440" y="95">ROLES</text>
+        <rect x="395" y="115" width="90" height="50" rx="12"/><text x="440" y="145">SCORE</text>
+        <rect x="395" y="165" width="90" height="50" rx="12"/><text x="440" y="195">GAPS</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="workspace">
+<div class="panel skill-panel">
+  <div class="panel-head"><div><div class="eyebrow">STEP 01</div><h2>Build your skill profile</h2></div><span id="skillCount" class="count">0 selected</span></div>
+  <div class="search-wrap"><span>⌕</span><input id="skillSearch" type="text" placeholder="Search skills..."></div>
+  <div id="skillsGrid" class="skills-grid">
+    {% for skill in skills %}<button class="skill-chip" data-skill="{{ skill }}">{{ skill }}</button>{% endfor %}
+  </div>
+  <div class="selection-footer"><span id="selectionText">Select the skills you already know.</span><button id="matchBtn" class="primary-btn">Analyze My Career Fit <span>→</span></button></div>
+</div>
+
+<div class="panel insight-panel">
+  <div class="panel-head"><div><div class="eyebrow">STEP 02</div><h2>Career intelligence</h2></div><div class="status-dot"><i></i> Ready</div></div>
+  <div id="emptyState" class="empty-state"><div class="empty-icon">✦</div><h3>Your results will appear here</h3><p>Select at least two skills and run the matcher to see ranked roles, matched skills and gaps.</p></div>
+  <div id="results" class="results hidden"></div>
+</div>
+</section>
+
+<section class="tech-strip"><div><span>PROJECT STACK</span></div><b>HTML</b><b>CSS</b><b>JavaScript</b><b>Python</b><b>Flask</b><b>REST API</b><b>Git</b></section>
+<footer><span>SkillForge — portfolio project</span><span>Built with explainable skill matching</span></footer>
+</main>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

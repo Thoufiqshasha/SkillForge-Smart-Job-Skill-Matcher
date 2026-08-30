@@ -1,26 +1,44 @@
 # SkillForge — Smart Job & Skill Matcher
 
-A full-stack career guidance web application that analyzes a user's technical skills and recommends suitable job roles based on skill compatibility.
+A full-stack career intelligence web application that analyzes a user's technical skills and recommends suitable job roles based on skill compatibility.
 
 ## Live Demo
 
 https://skillforge-smart-job-skill-matcher.onrender.com
 
-## GitHub Repository
+## Project Overview
 
-https://github.com/Thoufiqshasha/SkillForge-Smart-Job-Skill-Matcher
+SkillForge helps users understand which technology roles best match their current skills.
 
-## Features
+The application:
+- Analyzes selected technical skills
+- Calculates role compatibility
+- Identifies missing skills
+- Ranks suitable career roles
+- Provides explainable skill-match results
 
-- Skill-based job-role matching
+## Screenshots
+
+### SkillForge Dashboard
+
+![SkillForge Dashboard](Screenshot%202026-08-30%20171821.png)
+
+### Skill Matching Results
+
+![Skill Matching Results](Screenshot%202026-08-30%20171811.png)
+
+## Key Features
+
+- Skill-based career matching
 - Compatibility score calculation
 - Skill-gap identification
-- Multiple technical skill categories
-- Interactive and responsive user interface
-- REST API for skill matching
-- Python Flask backend
-- Dynamic JavaScript frontend
-- Career recommendations based on selected skills
+- 24 technical skills
+- 10 predefined role profiles
+- Ranked job recommendations
+- Interactive skill selection
+- Explainable matching results
+- Responsive user interface
+- REST API backend
 
 ## Technology Stack
 
@@ -39,30 +57,26 @@ https://github.com/Thoufiqshasha/SkillForge-Smart-Job-Skill-Matcher
 - Data structures
 - Set operations
 - Sorting and ranking
-- Percentage calculation
+- Percentage calculations
 - API request/response handling
 - Client-server architecture
 
-## System Architecture
+## How It Works
 
 ```text
 User
-  |
-  v
-Web Interface
-(HTML + CSS + JavaScript)
-  |
-  v
+  ↓
+Skill Selection
+  ↓
+Frontend
+HTML + CSS + JavaScript
+  ↓
 Flask REST API
-  |
-  v
+  ↓
 Skill Matching Engine
-  |
-  +---- Skill Analysis
-  |
-  +---- Compatibility Calculation
-  |
-  +---- Skill Gap Detection
-  |
-  v
-Job Recommendations
+  ↓
+Compatibility Calculation
+  ↓
+Skill Gap Detection
+  ↓
+Ranked Career Recommendations

@@ -1,29 +1,68 @@
 # SkillForge — Smart Job & Skill Matcher
 
-Full-stack portfolio project using Python, Flask, HTML, CSS and JavaScript.
+A full-stack career guidance web application that analyzes a user's technical skills and recommends suitable job roles based on skill compatibility.
+
+## Live Demo
+
+https://skillforge-smart-job-skill-matcher.onrender.com
+
+## GitHub Repository
+
+https://github.com/Thoufiqshasha/SkillForge-Smart-Job-Skill-Matcher
 
 ## Features
-- 24 skills
-- 10 technology roles
-- Searchable skills
-- Explainable compatibility scoring
-- Ranked job recommendations
-- Matched and missing skill tags
-- Flask JSON API
-- Responsive dark/glass UI
-- SVG architecture visualization
 
-## Run
-```bash
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-```
-Open http://127.0.0.1:5000
+- Skill-based job-role matching
+- Compatibility score calculation
+- Skill-gap identification
+- Multiple technical skill categories
+- Interactive and responsive user interface
+- REST API for skill matching
+- Python Flask backend
+- Dynamic JavaScript frontend
+- Career recommendations based on selected skills
 
-## Resume
-**SkillForge — Smart Job & Skill Matcher** | Python, Flask, JavaScript, HTML, CSS, REST API, Git
-- Built a full-stack career-matching application that ranks technology roles from user-selected skills.
-- Implemented a Flask API and explainable matching engine using scoring, iteration and sorting.
-- Designed a responsive dashboard with searchable skills, visual compatibility bars and an SVG system architecture view.
+## Technology Stack
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Python
+- Flask
+- REST API
+- Gunicorn
+
+### Concepts Used
+- Data structures
+- Set operations
+- Sorting and ranking
+- Percentage calculation
+- API request/response handling
+- Client-server architecture
+
+## System Architecture
+
+```text
+User
+  |
+  v
+Web Interface
+(HTML + CSS + JavaScript)
+  |
+  v
+Flask REST API
+  |
+  v
+Skill Matching Engine
+  |
+  +---- Skill Analysis
+  |
+  +---- Compatibility Calculation
+  |
+  +---- Skill Gap Detection
+  |
+  v
+Job Recommendations
